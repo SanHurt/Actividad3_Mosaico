@@ -1,0 +1,75 @@
+﻿<Window x:Class="Actividad3_Mosaico.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Actividad3_Mosaico"
+        mc:Ignorable="d"
+        Title="Actividad3_Mosaico" Height="800" Width="800" MinHeight="500" MinWidth="500">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextHorizontalAqua">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="Background" Value="Aqua"/>
+            <Setter Property="DockPanel.Dock" Value="Top"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextVerticalAqua" BasedOn="{StaticResource TextHorizontalAqua}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextHorizontalBlueViolet">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="Background" Value="BlueViolet"/>
+            <Setter Property="DockPanel.Dock" Value="Bottom"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextVerticalBlueViolet" BasedOn="{StaticResource TextHorizontalBlueViolet}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="DockPanel.Dock" Value="Right"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextHorizontalCoral">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="Background" Value="Coral"/>
+            <Setter Property="DockPanel.Dock" Value="Bottom"/>
+            <Setter Property="Width" Value="auto"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextVerticalCoral" BasedOn="{StaticResource TextHorizontalCoral}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextHorizontalDarkBlue">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="Background" Value="DarkBlue"/>
+            <Setter Property="DockPanel.Dock" Value="Top"/>
+            <Setter Property="Width" Value="auto"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TextVerticalDarkBlue" BasedOn="{StaticResource TextHorizontalDarkBlue}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="DockPanel.Dock" Value="Right"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <TextBlock Style="{StaticResource TextHorizontalAqua}"></TextBlock>
+            <TextBlock Style="{StaticResource TextVerticalAqua}"></TextBlock>
+            <TextBlock Style="{StaticResource TextVerticalBlueViolet}"></TextBlock>
+            <TextBlock Style="{StaticResource TextHorizontalBlueViolet}"></TextBlock>
+            <TextBlock Style="{StaticResource TextVerticalCoral}"></TextBlock>
+            <TextBlock Style="{StaticResource TextHorizontalCoral}"></TextBlock>
+            <TextBlock Style="{StaticResource TextHorizontalDarkBlue}"></TextBlock>
+            <TextBlock Style="{StaticResource TextVerticalDarkBlue}"></TextBlock>
+            <TextBlock DockPanel.Dock="Right" Background="Black"></TextBlock>
+            
+        </DockPanel>
+    </Grid>
+</Window>
